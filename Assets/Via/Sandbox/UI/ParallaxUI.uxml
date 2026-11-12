@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <Style src="ParallaxUI.uss" />
+  <ui:Image name="parallax-far" class="parallax-layer" />
+  <ui:Image name="parallax-near" class="parallax-layer" />
+</ui:UXML>

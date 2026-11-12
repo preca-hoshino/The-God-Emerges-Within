@@ -1,0 +1,5 @@
+{
+  "name": "Via.Persistence",
+  "rootNamespace": "Via.Persistence",
+  "references": ["Via.Story"]
+}

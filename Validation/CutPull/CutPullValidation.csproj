@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <DefineConstants>$(DefineConstants);CUT_PULL_VALIDATION</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../Assets/Via/Scripts/**/*.cs" />
+    <Compile Include="../../Assets/Via/Sandbox/Scripts/**/*.cs" />
+    <Compile Include="../Geometry/Program.cs" />
+    <Compile Include="CutPullChecks.cs" />
+    <Reference Include="$(UnityManaged)/UnityEngine*.dll" />
+  </ItemGroup>
+</Project>

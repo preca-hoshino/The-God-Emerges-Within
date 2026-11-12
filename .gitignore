@@ -1,0 +1,48 @@
+# Unity generated folders (including nested Unity projects)
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/[Bb]uild/
+**/[Bb]uilds/
+**/[Mm]emoryCaptures/
+**/[Rr]ecordings/
+
+# IDE and generated solution files
+**/.vs/
+**/.idea/
+*.csproj
+!Validation/Geometry/GeometryValidation.csproj
+!Validation/CutPull/CutPullValidation.csproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.opendb
+*.VC.db
+*.pdb
+*.mdb
+
+# Unity generated crash and diagnostic files
+sysinfo.txt
+**/crash-report.*
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Machine-local assistant configuration
+/opencode.json
+/opencode.jsonc
+
+# Local project artifacts and documents
+/UIExports/
+/SourceAssets/
+/Documents/
+/.vscode/
+

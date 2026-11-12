@@ -1,0 +1,8 @@
+@import url("unity-theme://default");
+
+/* Project-wide pixel font (zpix). The theme is applied after project style sheets, so the font has
+   to be redefined here; otherwise the default theme's .unity-text-element rule wins. */
+.unity-text-element {
+    -unity-font: url("project://database/Assets/Via/Art/Fonts/zpix.ttf");
+    -unity-font-definition: url("project://database/Assets/Via/Art/Fonts/zpix.ttf");
+}

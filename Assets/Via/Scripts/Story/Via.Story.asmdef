@@ -1,0 +1,5 @@
+{
+  "name": "Via.Story",
+  "rootNamespace": "Via.Story",
+  "references": ["Via.Shared"]
+}

@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+    <UnityProjectVersionFile>$(MSBuildThisFileDirectory)../ProjectSettings/ProjectVersion.txt</UnityProjectVersionFile>
+    <UnityEditorVersion Condition="Exists('$(UnityProjectVersionFile)')">$([System.Text.RegularExpressions.Regex]::Match($([System.IO.File]::ReadAllText('$(UnityProjectVersionFile)')), '(?m)^m_EditorVersion:[ \t]*(\S+)').Groups[1].Value)</UnityEditorVersion>
+    <UnityHubEditorRoot Condition="'$(UnityHubEditorRoot)' == '' And '$(OS)' == 'Windows_NT'">$(ProgramFiles)/Unity/Hub/Editor</UnityHubEditorRoot>
+    <UnityManaged Condition="'$(UnityManaged)' == '' And '$(UnityHubEditorRoot)' != '' And '$(UnityEditorVersion)' != ''">$(UnityHubEditorRoot)/$(UnityEditorVersion)/Editor/Data/Managed/UnityEngine</UnityManaged>
+  </PropertyGroup>
+
+  <Target Name="ValidateUnityManagedReferences" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="'$(UnityManaged)' == ''" Text="Cannot locate Unity engine references. Read the editor version from $(UnityProjectVersionFile), install that editor in the standard Windows Unity Hub directory, or pass -p:UnityManaged=&quot;path/to/Editor/Data/Managed/UnityEngine&quot;." />
+    <Error Condition="'$(UnityManaged)' != '' And !Exists('$(UnityManaged)/UnityEngine.CoreModule.dll')" Text="UnityEngine.CoreModule.dll was not found in '$(UnityManaged)' (project editor version: $(UnityEditorVersion)). Install the matching Unity editor, set -p:UnityHubEditorRoot=&quot;path/to/Hub/Editor&quot;, or pass -p:UnityManaged=&quot;path/to/Editor/Data/Managed/UnityEngine&quot;." />
+  </Target>
+</Project>

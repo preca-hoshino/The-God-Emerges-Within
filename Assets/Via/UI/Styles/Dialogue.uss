@@ -1,0 +1,18 @@
+/* Shared skin for every story dialogue, choice prompt and menu prompt. */
+#dialogue-panel { position: absolute; left: 64px; right: 64px; bottom: 24px; height: 306px; margin: 0; padding: 0; border-width: 0; border-radius: 0; background-color: rgba(0,0,0,0); background-image: none; overflow: visible; }
+.dialogue-fill { position: absolute; left: 22px; right: 22px; top: 36px; bottom: 29px; background-color: rgba(3,10,15,0.60); }
+.dialogue-frame { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
+.dialogue-copy { position: absolute; left: 300px; right: 80px; top: 76px; bottom: 50px; }
+.dialogue-name-panel { position: absolute; left: 50px; top: -34px; min-width: 300px; max-width: 40%; height: 102px; padding-left: 20px; padding-right: 20px; }
+.dialogue-scroll { flex-grow: 1; min-height: 0; }
+.dialogue-name-background { position: absolute; left: 0; right: 0; top: 0; bottom: 0; background-size: 100% 100%; -unity-slice-left: 6; -unity-slice-right: 6; -unity-slice-top: 6; -unity-slice-bottom: 6; -unity-slice-scale: 1px; }
+#speaker { font-size: 42px; color: rgb(54,143,154); -unity-font-style: bold; -unity-text-align: middle-center; white-space: nowrap; margin: 0; padding: 0; flex-grow: 1; }
+#dialogue-text { font-size: 34px; color: rgb(244,244,241); white-space: normal; -unity-text-align: upper-left; margin: 0; padding: 0; flex-grow: 0; flex-shrink: 0; min-height: 0; }
+#advance { position: absolute; top: -22px; right: 140px; width: 133px; height: 44px; min-width: 0; min-height: 0; margin: 0; padding: 0; border-width: 0; border-radius: 0; background-color: rgba(0,0,0,0); background-size: contain; background-repeat: no-repeat; -unity-slice-left: 0; -unity-slice-right: 0; -unity-slice-top: 0; -unity-slice-bottom: 0; -unity-background-image-tint-color: rgb(255,255,255); scale: 1 1; }
+#advance:hover, #advance:focus { background-color: rgba(0,0,0,0); -unity-background-image-tint-color: rgb(255,235,220); }
+#advance:active { background-color: rgba(0,0,0,0); scale: 0.97 0.97; }
+.story-option-button { width: 100%; height: 140px; min-height: 140px; margin: 4px 0; padding: 8px 36px; border-width: 0; border-radius: 0; background-color: rgba(0,0,0,0); background-size: 100% 100%; background-repeat: no-repeat; color: rgb(244,244,241); font-size: 26px; -unity-text-align: middle-center; background-image: url("project://database/Assets/Via/Art/UI/Common/Buttons/UI_Button_ChoiceBackground_Normal.png?fileID=2800000&guid=932250cae554dc84991599cac34dc12f&type=3"); }
+.story-option-button:hover, .story-option-button:focus { background-color: rgba(0,0,0,0); scale: 1.02 1.02; }
+.story-option-button:active { background-color: rgba(0,0,0,0); scale: 0.98 0.98; background-image: url("project://database/Assets/Via/Art/UI/Common/Buttons/UI_Button_ChoiceBackground_Pressed.png?fileID=2800000&guid=f737f81d264e89c43ac24c13046eeb26&type=3"); }
+.dialogue-name-background { background-image: url("project://database/Assets/Via/Art/UI/Dialogue/UI_Panel_Name.png?fileID=21300000&guid=1218f293d6966cc4ba264d5cef66a133&type=3"); }
+#advance { background-image: url("project://database/Assets/Via/Art/UI/Dialogue/UI_Icon_DialogueAdvance.png?fileID=21300000&guid=7d244087d3c0dd94db436f5f022733d4&type=3"); }

@@ -1,0 +1,5 @@
+{
+  "name": "Via.Application",
+  "rootNamespace": "Via.Application",
+  "references": ["Via.Shared", "Via.Story", "Via.Persistence"]
+}

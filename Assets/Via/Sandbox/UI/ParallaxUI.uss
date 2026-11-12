@@ -1,0 +1,8 @@
+.parallax-layer {
+    position: absolute;
+    left: -90px;
+    right: -90px;
+    top: -90px;
+    bottom: -90px;
+    -unity-background-scale-mode: scale-and-crop;
+}

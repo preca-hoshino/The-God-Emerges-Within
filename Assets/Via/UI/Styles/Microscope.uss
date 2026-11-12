@@ -1,0 +1,34 @@
+/* Native 715 x 600 reference: the opaque body covers the roots of the three objectives.
+   The controller fits the whole artboard to the viewport without changing its aspect ratio. */
+.modal-layer.pause-overlay { background-color: rgba(0, 0, 0, 0.5); }
+.pause-screen { background-color: rgba(0, 0, 0, 0); position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
+.pause-artboard { position: absolute; width: 715px; height: 600px; left: 50%; top: 50%; margin-left: -357.5px; margin-top: -300px; overflow: hidden; background-color: rgba(0, 0, 0, 0); }
+.pause-art { position: absolute; background-size: 100% 100%; background-repeat: no-repeat; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; }
+#pause-shelf { left: 83.355px; top: 265.607px; width: 411.383px; height: 277.077px; background-image: url("project://database/Assets/Via/Art/UI/Pause/UI_MicroscopeShelf.png?fileID=21300000&guid=0e542a612b57e0846b86fae7ae2cd25f&type=3"); }
+#pause-lens-pivot { position: absolute; left: 0; top: 0; width: 0; height: 0; }
+.pause-lens { position: absolute; width: 0; height: 0; transform-origin: 0 0; }
+.pause-objective-light { left: -31.2px; top: -36.6px; width: 62.4px; height: 73.2px; background-image: url("project://database/Assets/Via/Art/UI/Pause/UI_Lens_Grey.png?fileID=21300000&guid=8dcaa794fa6b3d14286509a5f294a4c5&type=3"); }
+.pause-objective-dark { left: -39.894px; top: -39.328px; width: 79.788px; height: 78.656px; rotate: 0deg; background-image: url("project://database/Assets/Via/Art/UI/Pause/UI_Lens_Black.png?fileID=21300000&guid=2cafd164c4288594eae22ff49ed6ca6f&type=3"); }
+/* Default poses also render correctly in UI Builder before the controller starts. */
+#pause-lens-0 { left: 259.630px; top: 408.256px; }
+#pause-lens-1 { left: 349.848px; top: 351.727px; }
+#pause-lens-2 { left: 352.924px; top: 252.682px; rotate: -90deg; }
+#pause-lens-0 > .pause-objective-dark, #pause-lens-2 > .pause-objective-dark { opacity: 0; }
+#pause-lens-1 > .pause-objective-light { opacity: 0; }
+#pause-lens-2, #pause-lens-3, #pause-lens-4, #pause-lens-5 { display: none; }
+#pause-body { left: -18.894px; top: 32.312px; width: 383.666px; height: 571.261px; background-image: url("project://database/Assets/Via/Art/UI/Pause/UI_MicroscopeBody.png?fileID=21300000&guid=cc1c25a34a12c524daa35fa68bdf86cf&type=3"); }
+#pause-turret { position: absolute; left: 130px; top: 186px; width: 240px; height: 240px; min-width: 0; min-height: 0; margin: 0; padding: 0; border-width: 0; border-radius: 120px; background-color: rgba(0, 0, 0, 0); background-image: none; }
+#pause-turret:hover, #pause-turret:active, #pause-turret:focus { background-color: rgba(0, 0, 0, 0); border-width: 0; scale: 1 1; }
+/* White click cue at the marked lower-right side of the microscope, pointing up-left. */
+#pause-click-arrow { position: absolute; left: 410px; top: 379px; width: 76px; height: 44px; min-width: 0; min-height: 0; margin: 0; padding: 0; border-width: 0; border-radius: 0; background-color: rgba(0, 0, 0, 0); background-image: none; rotate: 25deg; }
+#pause-click-arrow:hover, #pause-click-arrow:focus { background-color: rgba(0, 0, 0, 0); border-width: 0; scale: 1.06 1.06; }
+#pause-click-arrow:active { background-color: rgba(0, 0, 0, 0); scale: 0.96 0.96; }
+.pause-arrow-stroke { position: absolute; height: 5px; border-radius: 2.5px; background-color: rgb(255, 255, 255); }
+.pause-arrow-shaft { left: 7px; top: 19.5px; width: 62px; }
+.pause-arrow-upper { left: 2.86px; top: 9.5px; width: 28.28px; rotate: -45deg; }
+.pause-arrow-lower { left: 2.86px; top: 29.5px; width: 28.28px; rotate: 45deg; }
+#pause-menu { position: absolute; left: 0; top: 0; width: 715px; height: 600px; }
+#pause-menu .pause-text-button { position: absolute; left: 398px; top: 195px; transform-origin: 80px 30px; width: 290px; height: 60px; min-width: 0; min-height: 0; margin: 0; padding: 0; border-width: 0; border-radius: 0; background-color: rgba(0, 0, 0, 0); background-image: none; font-size: 38px; color: rgb(77, 78, 87); -unity-font: url("project://database/Assets/Via/Art/Fonts/FONT_Main_Progress.ttf?fileID=12800000&guid=5ab883b058a25f84784a7ecf122e46e7&type=3"); -unity-font-definition: url("project://database/Assets/Via/Art/Fonts/FONT_Main_Progress.ttf?fileID=12800000&guid=5ab883b058a25f84784a7ecf122e46e7&type=3"); -unity-font-style: bold; -unity-text-align: middle-left; white-space: nowrap; -unity-text-outline-width: 0; text-shadow: 3px 4px 0 rgb(88, 132, 232); scale: 1 1; }
+#pause-menu .pause-text-button:hover, #pause-menu .pause-text-button:focus { background-color: rgba(0, 0, 0, 0); color: rgb(45, 50, 62); text-shadow: 3px 4px 0 rgb(88, 132, 232); }
+#pause-menu .pause-text-button:active { background-color: rgba(0, 0, 0, 0); scale: 0.97 0.97; }
+#pause-menu .pause-text-button:disabled { background-color: rgba(0, 0, 0, 0); color: rgb(77, 78, 87); opacity: 1; }

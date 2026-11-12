@@ -1,0 +1,200 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <Style src="../Styles/GameUI.uss" />
+  <Style src="../Styles/TitleMenu.uss" />
+  <Style src="../Styles/LoadingIntro.uss" />
+  <Style src="../Styles/TitleBackdrop.uss" />
+  <Style src="../Styles/Dialogue.uss" />
+  <Style src="../Styles/Gameplay.uss" />
+  <Style src="../Styles/Microscope.uss" />
+  <Style src="../Styles/Popups.uss" />
+  <ui:VisualElement name="screen" class="screen">
+    <ui:VisualElement name="loading-screen" class="full loading-screen">
+      <ui:VisualElement name="loading-artboard" class="loading-artboard" picking-mode="Ignore" usage-hints="DynamicTransform">
+        <ui:VisualElement name="loading-world" class="full loading-world" picking-mode="Ignore" usage-hints="DynamicTransform">
+          <ui:VisualElement name="loading-dish" class="culture-disc" picking-mode="Ignore" usage-hints="DynamicTransform" />
+        </ui:VisualElement>
+        <ui:VisualElement name="loading-microscope-assembly" class="full loading-microscope-assembly" picking-mode="Ignore">
+          <ui:VisualElement name="loading-microscope" class="loading-art" picking-mode="Ignore" />
+          <ui:VisualElement name="loading-hand" class="loading-art" picking-mode="Ignore" usage-hints="DynamicTransform" />
+        </ui:VisualElement>
+        <ui:VisualElement name="loading-title-group" class="loading-title-group" picking-mode="Ignore">
+          <ui:VisualElement name="loading-title-halo" class="loading-game-title loading-title-halo" picking-mode="Ignore" />
+          <ui:VisualElement name="loading-title-bloom" class="loading-game-title loading-title-bloom" picking-mode="Ignore" />
+          <ui:VisualElement name="loading-title" class="loading-game-title" picking-mode="Ignore" />
+        </ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="title-screen" class="full title-screen">
+      <ui:VisualElement name="title-artboard" class="title-artboard">
+        <ui:VisualElement name="title-view-motion" class="full title-view-motion">
+          <ui:VisualElement name="title-background-motion" class="full title-background-motion" picking-mode="Ignore">
+            <ui:VisualElement name="title-dish" class="culture-disc" picking-mode="Ignore" usage-hints="DynamicTransform" />
+          </ui:VisualElement>
+          <ui:VisualElement name="title-content-motion" class="title-content-motion">
+            <ui:VisualElement name="title-menu" class="title-menu">
+              <ui:Button name="new-game" text="开始游戏" class="title-text-button" />
+              <ui:Button name="continue-game" text="继续游戏" class="title-text-button" />
+              <ui:Button name="title-settings" text="设　　置" class="title-text-button" />
+              <ui:Button name="credits-open" text="制作人员" class="title-text-button" />
+              <ui:Button name="title-quit" text="退出游戏" class="title-text-button" />
+            </ui:VisualElement>
+          </ui:VisualElement>
+        </ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="story-screen" class="full story-screen" style="display: none;">
+      <ui:VisualElement name="story-stage" class="story-stage" picking-mode="Ignore" />
+      <ui:VisualElement name="presentation-layer" class="presentation-layer">
+        <ui:VisualElement name="cg-layer" class="cg-layer" />
+        <ui:VisualElement name="screen-layer" class="screen-layer" />
+        <ui:VisualElement name="flash-overlay" class="flash-overlay" />
+      </ui:VisualElement>
+      <ui:Label name="story-subtitle" class="story-subtitle" picking-mode="Ignore" />
+      <ui:VisualElement name="choice-list" class="choice-list" />
+      <ui:VisualElement name="dialogue-panel" class="dialogue-box">
+        <ui:VisualElement class="dialogue-fill" picking-mode="Ignore" />
+        <ui:VisualElement name="dialogue-frame" class="dialogue-frame" picking-mode="Ignore" />
+        <ui:VisualElement class="dialogue-copy" picking-mode="Ignore">
+          <ui:ScrollView name="dialogue-scroll" class="dialogue-scroll" mode="Vertical" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden">
+            <ui:Label name="dialogue-text" class="dialogue-text" picking-mode="Ignore" />
+          </ui:ScrollView>
+        </ui:VisualElement>
+        <ui:VisualElement name="speaker-panel" class="dialogue-name-panel" picking-mode="Ignore">
+          <ui:VisualElement class="dialogue-name-background" picking-mode="Ignore" />
+          <ui:Label name="speaker" class="nameplate" picking-mode="Ignore" />
+        </ui:VisualElement>
+        <ui:Button name="advance" class="advance" tooltip="下一句" />
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="level-screen" class="full level-screen" style="display: none;">
+      <ui:VisualElement name="gameplay-artboard">
+        <ui:VisualElement name="gameplay-board" class="gameplay-art" picking-mode="Ignore" />
+        <ui:VisualElement name="gameplay-brain" class="gameplay-art" picking-mode="Ignore" />
+        <ui:VisualElement name="neuron-canvas" class="neuron-canvas" />
+        <ui:VisualElement name="gameplay-clamps" class="gameplay-art" picking-mode="Ignore" />
+        <ui:Label name="gameplay-title" text="神经元 回应实验" class="gameplay-art" picking-mode="Ignore" />
+        <ui:Label name="level-name" class="gameplay-art" picking-mode="Ignore" />
+        <ui:VisualElement name="gameplay-tool-heading" class="gameplay-art" picking-mode="Ignore"><ui:Label text="工具" picking-mode="Ignore" /></ui:VisualElement>
+        <ui:VisualElement name="gameplay-pass-heading" class="gameplay-art" picking-mode="Ignore">
+          <ui:Label text="可通关" class="pass-first" picking-mode="Ignore" /><ui:Label text="范式" class="pass-second" picking-mode="Ignore" />
+        </ui:VisualElement>
+        <ui:Button name="tool-attractor" class="gameplay-tool"><ui:VisualElement class="gameplay-tool-icon" picking-mode="Ignore" /><ui:Label text="吸&#10;引&#10;点" class="gameplay-tool-caption" picking-mode="Ignore" /></ui:Button>
+        <ui:Button name="tool-pull" class="gameplay-tool"><ui:VisualElement class="gameplay-tool-icon" picking-mode="Ignore" /><ui:Label text="牵&#10;引" class="gameplay-tool-caption" picking-mode="Ignore" /></ui:Button>
+        <ui:Button name="tool-cut" class="gameplay-tool"><ui:VisualElement class="gameplay-tool-icon" picking-mode="Ignore" /><ui:Label text="切&#10;断" class="gameplay-tool-caption" picking-mode="Ignore" /></ui:Button>
+        <ui:Button name="tool-branch" class="gameplay-tool"><ui:VisualElement class="gameplay-tool-icon" picking-mode="Ignore" /><ui:Label text="分&#10;叉" class="gameplay-tool-caption" picking-mode="Ignore" /></ui:Button>
+        <ui:Button name="tool-reshape" class="gameplay-tool"><ui:VisualElement class="gameplay-tool-icon" picking-mode="Ignore" /><ui:Label text="重&#10;塑" class="gameplay-tool-caption" picking-mode="Ignore" /></ui:Button>
+        <ui:Button name="candy-open" class="gameplay-action" />
+        <ui:ScrollView name="paradigm-list" class="paradigm-list" mode="Vertical" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" />
+    <ui:VisualElement name="teaching-hud" class="teaching-hud popup-frame" style="display: none;">
+      <ui:VisualElement name="teaching-tags" class="teaching-tags" picking-mode="Ignore">
+        <ui:Label text="步骤" class="teaching-tag" picking-mode="Ignore" />
+        <ui:Label name="teaching-progress" class="teaching-tag teaching-tag-count" picking-mode="Ignore" />
+      </ui:VisualElement>
+      <ui:Label name="teaching-instruction" class="teaching-copy" picking-mode="Ignore" />
+      <ui:Label name="teaching-sample" class="teaching-title" picking-mode="Ignore" />
+      <ui:Label name="teaching-feedback" class="teaching-note" picking-mode="Ignore" />
+      <ui:Button name="teaching-exit" text="退出教学" />
+    </ui:VisualElement>
+        <ui:Label name="operation-hint" class="operation-hint" picking-mode="Ignore" />
+        <ui:VisualElement name="gameplay-actions">
+          <ui:Button name="restart-level" text="重新开始" class="gameplay-action" /><ui:Button name="undo" text="撤销" class="gameplay-action" /><ui:Button name="submit" text="提交图案" class="gameplay-action" />
+        </ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+    
+    <ui:Button name="skip-story" class="skip-button" tooltip="跳过剧情" style="display: none;" />
+    <ui:Button name="pause-open" class="pause-button" tooltip="暂停" style="display: none;" />
+    <ui:Label name="system-status" class="system-status" style="display: none;" />
+    <ui:VisualElement name="teaching-marker" class="teaching-marker" style="display: none;" />
+    <ui:VisualElement name="modal-layer" class="modal-layer" style="display: none;">
+      <ui:VisualElement name="pause-panel" class="pause-screen">
+        <ui:VisualElement name="pause-artboard" class="pause-artboard">
+          <ui:VisualElement name="pause-menu" class="pause-menu" picking-mode="Ignore">
+            <ui:Button name="pause-resume" text="进入游戏" class="pause-text-button" usage-hints="DynamicTransform" />
+            <ui:Button name="pause-save" text="保存检查点" class="pause-text-button" usage-hints="DynamicTransform" style="display: none;" />
+            <ui:Button name="pause-settings" text="设置" class="pause-text-button" usage-hints="DynamicTransform" style="display: none;" />
+            <ui:Button name="pause-title" text="返回标题" class="pause-text-button" usage-hints="DynamicTransform" style="display: none;" />
+            <ui:Button name="pause-quit" text="退出游戏" class="pause-text-button" usage-hints="DynamicTransform" style="display: none;" />
+          </ui:VisualElement>
+          <ui:VisualElement name="pause-shelf" class="pause-art" picking-mode="Ignore" />
+          <ui:VisualElement name="pause-lens-pivot" class="pause-pivot" picking-mode="Ignore">
+            <ui:VisualElement name="pause-lens-0" class="pause-lens" picking-mode="Ignore" usage-hints="DynamicTransform">
+              <ui:VisualElement class="pause-art pause-objective-light" picking-mode="Ignore" />
+              <ui:VisualElement class="pause-art pause-objective-dark" picking-mode="Ignore" />
+            </ui:VisualElement>
+            <ui:VisualElement name="pause-lens-1" class="pause-lens" picking-mode="Ignore" usage-hints="DynamicTransform">
+              <ui:VisualElement class="pause-art pause-objective-light" picking-mode="Ignore" />
+              <ui:VisualElement class="pause-art pause-objective-dark" picking-mode="Ignore" />
+            </ui:VisualElement>
+            <ui:VisualElement name="pause-lens-2" class="pause-lens" picking-mode="Ignore" usage-hints="DynamicTransform">
+              <ui:VisualElement class="pause-art pause-objective-light" picking-mode="Ignore" />
+              <ui:VisualElement class="pause-art pause-objective-dark" picking-mode="Ignore" />
+            </ui:VisualElement>
+            <ui:VisualElement name="pause-lens-3" class="pause-lens" picking-mode="Ignore" usage-hints="DynamicTransform">
+              <ui:VisualElement class="pause-art pause-objective-light" picking-mode="Ignore" />
+              <ui:VisualElement class="pause-art pause-objective-dark" picking-mode="Ignore" />
+            </ui:VisualElement>
+            <ui:VisualElement name="pause-lens-4" class="pause-lens" picking-mode="Ignore" usage-hints="DynamicTransform">
+              <ui:VisualElement class="pause-art pause-objective-light" picking-mode="Ignore" />
+              <ui:VisualElement class="pause-art pause-objective-dark" picking-mode="Ignore" />
+            </ui:VisualElement>
+            <ui:VisualElement name="pause-lens-5" class="pause-lens" picking-mode="Ignore" usage-hints="DynamicTransform">
+              <ui:VisualElement class="pause-art pause-objective-light" picking-mode="Ignore" />
+              <ui:VisualElement class="pause-art pause-objective-dark" picking-mode="Ignore" />
+            </ui:VisualElement>
+          </ui:VisualElement>
+          <ui:VisualElement name="pause-body" class="pause-art" picking-mode="Ignore" />
+          <ui:Button name="pause-turret" class="pause-turret" tooltip="点击转动镜头，切换暂停选项" />
+          <ui:Button name="pause-click-arrow" class="pause-click-arrow" tooltip="点击切换暂停选项">
+            <ui:VisualElement class="pause-arrow-stroke pause-arrow-shaft" picking-mode="Ignore" />
+            <ui:VisualElement class="pause-arrow-stroke pause-arrow-upper" picking-mode="Ignore" />
+            <ui:VisualElement class="pause-arrow-stroke pause-arrow-lower" picking-mode="Ignore" />
+          </ui:Button>
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement name="settings-panel" class="modal-panel">
+        <ui:Label text="设置" class="modal-title" />
+        <ui:Slider name="master-volume" label="总音量" low-value="0" high-value="1" />
+        <ui:Slider name="music-volume" label="背景音乐" low-value="0" high-value="1" />
+        <ui:Slider name="effects-volume" label="音效" low-value="0" high-value="1" />
+        <ui:Button name="settings-close" text="返回" />
+      </ui:VisualElement>
+      <ui:VisualElement name="result-panel" class="modal-panel">
+        <ui:Label name="result-title" class="modal-title" />
+        <ui:Label name="result-text" class="wrap modal-copy" />
+        <ui:Button name="result-confirm" text="确认回应 · 继续剧情" class="primary" />
+        <ui:Button name="result-back" text="返回修改" />
+      </ui:VisualElement>
+      <ui:VisualElement name="candy-panel" class="modal-panel wide-panel">
+        <ui:Label text="糖果 · 样本学习" class="modal-title" />
+        <ui:Label text="选择范式，跟随提示亲手完成样本。不会直接通关。" class="wrap modal-copy" />
+        <ui:ScrollView name="sample-list" class="sample-list" />
+        <ui:Button name="candy-back" text="返回解题" />
+      </ui:VisualElement>
+      <ui:VisualElement name="teaching-complete-panel" class="modal-panel">
+        <ui:Label text="样本学习完成" class="modal-title" />
+        <ui:Label text="样本只提供一种做法。现在回到原来的现场，尝试自己的回应。" class="wrap modal-copy" />
+        <ui:Button name="teaching-return" text="返回原解题现场" class="primary" />
+      </ui:VisualElement>
+      <ui:VisualElement name="confirm-panel" class="modal-panel">
+        <ui:Label name="confirm-title" class="modal-title" />
+        <ui:Label name="confirm-text" class="wrap modal-copy" />
+        <ui:Button name="confirm-yes" text="确认" class="primary" />
+        <ui:Button name="confirm-no" text="取消" />
+      </ui:VisualElement>
+      <ui:VisualElement name="credits-panel" class="modal-panel">
+        <ui:Label text="制作人员" class="modal-title" />
+        <ui:VisualElement name="credits-list" />
+        <ui:Button name="credits-close" text="返回" />
+      </ui:VisualElement>
+      <ui:VisualElement name="notice-panel" class="modal-panel">
+        <ui:Label name="notice-title" class="modal-title" />
+        <ui:Label name="notice-text" class="wrap modal-copy" />
+        <ui:Button name="notice-close" text="知道了" class="primary" />
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="tooltip" class="tooltip" style="display: none;">
+      <ui:Label name="tooltip-text" class="wrap" />
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

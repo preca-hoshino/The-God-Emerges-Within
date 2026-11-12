@@ -1,0 +1,54 @@
+/* Animated 1920 x 1080 composition. Labels use the shared Zpix font. */
+.title-screen { background-color: rgb(0, 0, 0); background-image: none; }
+.title-artboard { position: absolute; width: 1920px; height: 1080px; left: 50%; top: 50%; margin-left: -960px; margin-top: -540px; overflow: hidden; }
+.title-view-motion { align-items: stretch; justify-content: flex-start; }
+.title-background-motion { background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-repeat: no-repeat;
+    background-image: none; }
+.title-content-motion { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; align-items: stretch; justify-content: flex-start; transform-origin: 50% 50%; }
+.title-menu { position: absolute; left: 50%; top: 50%; margin-left: -148px; margin-top: -227.5px; width: 296px; height: 455px; }
+.title-menu Button { position: absolute; left: 0; width: 296px; min-width: 0; min-height: 0; flex-shrink: 0; margin: 0; padding: 0; border-width: 0; border-radius: 0; background-color: rgba(0, 0, 0, 0); background-image: none; scale: 1 1; }
+.title-menu Button:hover, .title-menu Button:focus, .title-menu Button:active, .title-menu Button:disabled { background-color: rgba(0, 0, 0, 0); scale: 1 1; }
+.title-menu Button:disabled { opacity: 1; }
+#continue-game.unavailable { opacity: 0.45; }
+#new-game { top: 0px; height: 90px; }
+#continue-game { top: 92px; height: 88px; }
+#title-settings { top: 183px; height: 86px; }
+#credits-open { top: 272px; height: 90px; }
+#title-quit { top: 365px; height: 90px; }
+
+/* The menu labels are baked into the authored artwork, so the UXML text stays invisible
+   but available for tooling and accessibility. */
+.title-menu .title-text-button {
+    font-size: 66px; color: rgba(0, 0, 0, 0);
+    -unity-text-align: middle-center; white-space: nowrap;
+    -unity-text-outline-width: 0;
+    -unity-text-outline-color: rgba(0, 0, 0, 0);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.title-menu .title-text-button:hover, .title-menu .title-text-button:focus { color: rgba(0, 0, 0, 0); }
+.title-menu .title-text-button:active { color: rgba(0, 0, 0, 0); scale: 0.97 0.97; }
+.title-menu .title-text-button:disabled { color: rgba(0, 0, 0, 0); }
+
+/* Normal / hover (touch) / pressed artwork for each menu button. */
+#new-game { background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Start_Normal.png?fileID=2800000&guid=18322bc91c886e449aeb67d05a6c446c&type=3"); }
+#new-game:hover, #new-game:focus { background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Start_Hover.png?fileID=2800000&guid=9319f838c50451242be610be1e5bdff6&type=3"); }
+#new-game:active { background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Start_Pressed.png?fileID=2800000&guid=defca2a5211a9e84086b95d693b2e9b5&type=3"); }
+
+#continue-game { background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Continue_Normal.png?fileID=2800000&guid=d0b4057afe839b1478ad73ab352d2865&type=3"); }
+#continue-game:hover, #continue-game:focus { background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Continue_Hover.png?fileID=2800000&guid=a2060c3552b71394ab85262f45fc56cc&type=3"); }
+#continue-game:active { background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Continue_Pressed.png?fileID=2800000&guid=abe64a8b25a8d5d4e96c35c80077cd7a&type=3"); }
+#continue-game.unavailable, #continue-game.unavailable:hover, #continue-game.unavailable:active { background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Continue_Normal.png?fileID=2800000&guid=d0b4057afe839b1478ad73ab352d2865&type=3"); }
+
+#title-settings { background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Settings_Normal.png?fileID=2800000&guid=c02941565c6ec6044bb39663c13cf1c6&type=3"); }
+#title-settings:hover, #title-settings:focus { background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Settings_Hover.png?fileID=2800000&guid=7b8f52dfed5c8094398ee0ab493ccc4b&type=3"); }
+#title-settings:active { background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Settings_Pressed.png?fileID=2800000&guid=d3a4bdbcd4f363a4fb0016b4d4c7509b&type=3"); }
+
+#credits-open { background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Credits_Normal.png?fileID=2800000&guid=ab939fac3c1c3bd409d3af71022d4bc8&type=3"); }
+#credits-open:hover, #credits-open:focus { background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Credits_Hover.png?fileID=2800000&guid=bd5a613788a18bd469f64e51d2085c25&type=3"); }
+#credits-open:active { background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Credits_Pressed.png?fileID=2800000&guid=35c06f965a68b4a479b3913ee7d60fc7&type=3"); }
+
+#title-quit { background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Quit_Normal.png?fileID=2800000&guid=586817bb4441b7e41875866176732fef&type=3"); }
+#title-quit:hover, #title-quit:focus { background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Quit_Hover.png?fileID=2800000&guid=4bd3d4af8551ea04c8698b586045ce4a&type=3"); }
+#title-quit:active { background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Quit_Pressed.png?fileID=2800000&guid=29f558bf48d9adf43984675961f333ef&type=3"); }

@@ -1,0 +1,6 @@
+/* The complete six-pose artwork jumps one station at a time around its center. */
+.culture-disc {
+    position: absolute; left: 192px; top: -228px; width: 1536px; height: 1536px;
+    background-size: 100% 100%; background-repeat: no-repeat;
+    transform-origin: 50% 50%;
+}

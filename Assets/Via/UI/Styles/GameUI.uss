@@ -1,0 +1,95 @@
+:root { color: rgb(224, 234, 238); font-size: 20px; -unity-font: url("project://database/Assets/Via/Art/Fonts/zpix.ttf?fileID=12800000&guid=e83a8c5dc1ac14542a47b47fbc888105&type=3"); -unity-font-definition: url("project://database/Assets/Via/Art/Fonts/zpix.ttf?fileID=12800000&guid=e83a8c5dc1ac14542a47b47fbc888105&type=3"); }
+.screen { flex-grow: 1; background-color: rgb(12, 21, 31); }
+.full { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
+Label { white-space: normal; }
+Button { min-height: 48px; margin: 6px; padding: 10px 20px; background-color: rgb(26, 44, 56); color: rgb(224, 234, 238); border-width: 1px; border-color: rgb(63, 88, 100); border-radius: 8px; -unity-text-align: middle-center; }
+Button:hover { background-color: rgb(38, 66, 78); border-color: rgb(103, 196, 191); }
+Button:active { background-color: rgb(16, 37, 47); scale: 0.98 0.98; }
+Button:focus { border-color: rgb(152, 222, 216); }
+Button.selected { background-color: rgb(35, 88, 87); border-color: rgb(115, 229, 207); }
+Button:disabled { background-color: rgb(23, 31, 39); color: rgb(101, 116, 128); border-color: rgb(43, 55, 65); }
+.primary { background-color: rgb(38, 109, 101); border-color: rgb(83, 173, 153); }
+.primary:hover { background-color: rgb(50, 139, 127); }
+.title-screen { align-items: center; justify-content: center; overflow: hidden; background-color: rgb(13, 25, 36); }
+.title-view-motion { align-items: center; justify-content: center; }
+.title-background-motion { background-color: rgb(13, 25, 36); }
+.title-content-motion { width: 430px; align-items: center; justify-content: center; }
+.logo { font-size: 112px; color: rgb(123, 217, 203); -unity-font-style: bold; }
+.subtitle { font-size: 24px; color: rgb(155, 185, 195); margin-bottom: 26px; }
+.title-menu { width: 330px; }
+.version { position: absolute; bottom: 26px; right: 36px; font-size: 16px; color: rgb(112, 137, 150); }
+.story-screen { background-color: rgba(0, 0, 0, 0); }
+.story-stage { flex-grow: 1; align-items: center; justify-content: center; }
+.dialogue-box { height: 250px; margin: 0 90px 55px 90px; padding: 26px 36px; border-width: 1px; border-color: rgb(73, 111, 121); border-radius: 12px; background-color: rgba(12, 25, 35, 0.96); }
+.nameplate { font-size: 24px; color: rgb(113, 213, 196); margin-bottom: 18px; -unity-font-style: bold; }
+.dialogue-text { font-size: 24px; flex-grow: 1; }
+.story-subtitle { position: absolute; left: 10%; right: 10%; top: 0; bottom: 0; font-size: 36px; color: rgb(26, 45, 58); -unity-text-align: middle-center; text-shadow: 0 2px 10px rgba(255, 255, 255, 0.6); display: none; }
+.story-subtitle.hero-line { font-size: 96px; -unity-font-style: bold; color: rgb(12, 26, 36); text-shadow: 0 4px 18px rgba(255, 255, 255, 0.85); }
+.advance { align-self: flex-end; min-width: 160px; }
+.choice-list { position: absolute; bottom: 33%; left: 28%; right: 28%; }
+.presentation-layer { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
+.cg-layer { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
+.cg-item { align-items: center; justify-content: center; margin: 140px 220px; background-color: rgba(9, 22, 32, 0.94); border-width: 2px; border-color: rgb(92, 150, 150); border-radius: 12px; }
+.cg-item Label { font-size: 30px; color: rgb(150, 220, 208); }
+.screen-layer { position: absolute; left: 0; right: 0; top: 0; bottom: 0; background-color: rgba(4, 10, 16, 0.9); display: none; }
+.screen-layer Label { font-size: 28px; color: rgb(150, 200, 200); -unity-text-align: middle-center; }
+.flash-overlay { position: absolute; left: 0; right: 0; top: 0; bottom: 0; background-color: rgb(255, 255, 255); opacity: 0; }
+.level-header { height: 100px; flex-direction: row; align-items: center; padding: 0 30px; }
+.heading { font-size: 28px; -unity-font-style: bold; margin-right: 30px; }
+.level-body { flex-grow: 1; flex-direction: row; margin: 0 24px; }
+.tool-sidebar { width: 208px; padding: 12px; background-color: rgb(17, 32, 43); border-radius: 10px; }
+.paradigm-sidebar { width: 244px; padding: 16px; background-color: rgb(17, 32, 43); border-radius: 10px; }
+.section-title { font-size: 22px; color: rgb(126, 207, 194); margin: 8px 4px 18px 4px; }
+.canvas-column { flex-grow: 1; margin: 0 18px; }
+.neuron-canvas { flex-grow: 1; overflow: hidden; border-width: 2px; border-color: rgb(47, 78, 91); border-radius: 12px; background-color: rgb(10, 23, 32); }
+.legend { height: 38px; font-size: 16px; -unity-text-align: middle-center; color: rgb(147, 173, 185); }
+.level-footer { height: 116px; padding: 8px 24px 28px 24px; flex-direction: row; align-items: center; }
+.operation-hint { flex-grow: 1; margin-right: 20px; font-size: 18px; }
+.separator { height: 1px; margin: 16px 6px; background-color: rgb(49, 72, 85); }
+.muted { color: rgb(147, 169, 180); font-size: 18px; }
+.sidebar-note { margin: 26px 6px; }
+.paradigm-list { flex-grow: 1; }
+.paradigm-card { min-height: 132px; flex-direction: column; align-items: center; }
+.diagram { font-size: 38px; color: rgb(144, 222, 208); }
+.diagram-caption { font-size: 14px; color: rgb(147, 169, 180); margin-top: 6px; -unity-text-align: middle-center; }
+
+.pause-button {
+    position: absolute; top: 20px; right: 24px;
+    width: 88px; height: 88px; min-width: 0; min-height: 0;
+    margin: 0; padding: 0; border-width: 0; border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Pause.png?fileID=2800000&guid=54734af7ed7a2b24aa064a1733bc9f25&type=3");
+    background-size: contain; background-repeat: no-repeat;
+}
+.pause-button:hover, .pause-button:focus { background-color: rgba(0, 0, 0, 0); border-width: 0; scale: 1.08 1.08; }
+.pause-button:active { background-color: rgba(0, 0, 0, 0); scale: 0.94 0.94; }
+/* Story skip sits immediately left of the pause button and matches its size.
+   The 88px width plus a 12px gutter gives right: 24 + 88 + 12 = 124px. */
+.skip-button {
+    position: absolute; top: 20px; right: 124px;
+    width: 88px; height: 88px; min-width: 0; min-height: 0;
+    margin: 0; padding: 0; border-width: 0; border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Via/Art/UI/Title/Images/UI_Button_Skip.png?fileID=2800000&guid=2392f272a99749a981be5f204d51ef54&type=3");
+    background-size: contain; background-repeat: no-repeat;
+}
+.skip-button:hover, .skip-button:focus { background-color: rgba(0, 0, 0, 0); border-width: 0; scale: 1.08 1.08; }
+.skip-button:active { background-color: rgba(0, 0, 0, 0); scale: 0.94 0.94; }
+.system-status { position: absolute; bottom: 8px; left: 24px; right: 200px; font-size: 15px; color: rgb(152, 182, 190); }
+.modal-layer { position: absolute; left: 0; right: 0; top: 0; bottom: 0; background-color: rgba(2, 9, 16, 0.82); align-items: center; justify-content: center; }
+.modal-panel { width: 580px; max-height: 90%; padding: 32px; flex-direction: column; align-items: stretch; border-width: 1px; border-color: rgb(91, 145, 148); border-radius: 14px; background-color: rgb(19, 35, 47); }
+.wide-panel { width: 760px; }
+#credits-panel { width: 620px; padding: 40px 44px; }
+#credits-list { flex-direction: column; align-items: stretch; flex-grow: 0; flex-shrink: 0; margin-bottom: 26px; }
+.credits-row { flex-direction: row; align-items: center; height: 34px; margin: 0 0 10px 0; padding: 0; flex-grow: 0; flex-shrink: 0; }
+.credits-role { width: 88px; min-width: 88px; flex-grow: 0; flex-shrink: 0; color: rgb(0, 0, 0); font-size: 22px; -unity-font-style: bold; white-space: nowrap; margin: 0; padding: 0; }
+.credits-names { flex-grow: 1; flex-shrink: 1; font-size: 22px; -unity-font-style: bold; white-space: nowrap; -unity-text-align: middle-left; margin: 0; padding: 0; }
+#credits-panel > Button { align-self: flex-start; }
+.modal-title { font-size: 30px; color: rgb(126, 219, 201); margin-bottom: 26px; }
+.modal-copy { margin-bottom: 24px; font-size: 22px; }
+Slider { margin: 20px 4px; }
+Slider > Label { min-width: 135px; }
+.sample-list { max-height: 400px; margin-bottom: 20px; }
+.tooltip { position: absolute; width: 360px; padding: 18px; border-width: 1px; border-color: rgb(108, 151, 151); border-radius: 8px; background-color: rgb(26, 46, 59); }
+.tooltip Label { font-size: 20px; }
+.teaching-marker { position: absolute; width: 32px; height: 32px; border-width: 3px; border-color: rgb(244, 200, 90); border-radius: 16px; }

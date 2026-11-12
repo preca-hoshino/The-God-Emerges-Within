@@ -1,0 +1,90 @@
+/* First gameplay art pass, authored on the supplied 1920 x 1080 board. */
+#level-screen { overflow: hidden; background-color: rgba(2,15,22,0.32); }
+#gameplay-artboard { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; overflow: hidden; }
+.gameplay-art { position: absolute; background-size: 100% 100%; background-repeat: no-repeat; -unity-slice-left: 0; -unity-slice-right: 0; -unity-slice-top: 0; -unity-slice-bottom: 0; }
+#gameplay-board { left: 43px; top: 40px; width: 1874px; height: 1039px; opacity: 0.84; }
+#gameplay-brain { left: 548px; top: 188px; width: 913px; height: 675px; opacity: 0.68; }
+#gameplay-clamps { left: 514px; top: 611px; width: 948px; height: 469px; }
+#neuron-canvas { position: absolute; left: 548px; top: 188px; width: 913px; height: 675px; margin: 0; padding: 0; border-width: 0; border-radius: 0; background-color: rgba(0,0,0,0); overflow: hidden; }
+#gameplay-title { left: 322px; top: 20px; width: 479px; height: 80px; color: white; font-size: 54px; -unity-font-style: bold; -unity-text-align: middle-center; margin: 0; padding: 0; }
+#level-name { left: 322px; top: 106px; width: 327px; height: 80px; color: white; font-size: 52px; -unity-text-align: middle-center; white-space: nowrap; margin: 0; padding: 0; }
+#gameplay-tool-heading { left: 99px; top: 120px; width: 249px; height: 159px; }
+#gameplay-tool-heading Label { position: absolute; left: 0; top: 0; width: 233px; height: 117px; color: black; font-size: 64px; -unity-text-align: middle-center; margin: 0; padding: 0; }
+#gameplay-pass-heading { left: 1588px; top: 119px; width: 318px; height: 191px; }
+.pass-first { position: absolute; left: 5px; top: 0; width: 234px; height: 118px; }
+.pass-second { position: absolute; left: 106px; top: 101px; width: 196px; height: 85px; }
+#gameplay-pass-heading Label { color: black; font-size: 58px; -unity-text-align: middle-center; margin: 0; padding: 0; }
+#gameplay-artboard .gameplay-tool { position: absolute; left: 125px; width: 205px; height: 128px; min-height: 0; margin: 0; padding: 0; border-width: 0; border-radius: 0; background-color: rgba(0,0,0,0); scale: 1 1; }
+.gameplay-tool-icon { position: absolute; left: 5px; top: 0; width: 129px; height: 128px; background-size: contain; background-repeat: no-repeat; }
+.gameplay-tool-caption { position: absolute; left: 149px; top: 0; width: 45px; height: 128px; color: white; font-size: 34px; -unity-text-align: middle-center; margin: 0; padding: 0; }
+#tool-attractor { top: 283px; } #tool-pull { top: 431px; } #tool-cut { top: 579px; } #tool-branch { top: 727px; } #tool-reshape { top: 875px; }
+#gameplay-artboard .gameplay-tool:hover .gameplay-tool-icon { -unity-background-image-tint-color: rgb(204,255,249); scale: 1.035 1.035; }
+#gameplay-artboard .gameplay-tool.selected .gameplay-tool-icon { -unity-background-image-tint-color: rgb(175,255,236); scale: 1.04 1.04; }
+#gameplay-artboard .gameplay-tool:focus .gameplay-tool-icon { -unity-background-image-tint-color: rgb(200,255,248); }
+#gameplay-artboard .gameplay-tool:disabled { opacity: 0.35; }
+#paradigm-list { position: absolute; left: 1590px; top: 326px; width: 292px; height: 656px; }
+#gameplay-artboard .paradigm-card { width: 100%; height: 285px; min-height: 0; flex-shrink: 0; flex-direction: column; align-items: center; margin: 0; padding: 0; border-width: 0; border-radius: 0; background-color: rgba(0,0,0,0); scale: 1 1; }
+.gameplay-paradigm-icon { width: 204px; height: 204px; flex-shrink: 0; background-size: 100% 100%; background-repeat: no-repeat; align-items: center; justify-content: center; }
+.paradigm-eight { background-size: 100% 125.49%; background-position: left top; }
+.paradigm-generated { border-width: 6px; border-color: rgb(105,137,142); border-radius: 102px; background-color: rgba(52,95,105,0.26); }
+.gameplay-paradigm-caption { width: 100%; height: 64px; margin: 10px 0 0 0; padding: 0; font-size: 36px; color: white; -unity-text-align: middle-center; white-space: normal; }
+#gameplay-artboard .paradigm-card:hover { background-color: rgba(72,147,153,0.15); }
+#gameplay-artboard .paradigm-card:focus { background-color: rgba(72,147,153,0.15); }
+#gameplay-artboard .three-targets .paradigm-card { height: 212px; }
+.three-targets .gameplay-paradigm-icon { width: 154px; height: 154px; }
+.three-targets .gameplay-paradigm-caption { height: 48px; margin-top: 4px; font-size: 28px; }
+#gameplay-actions .gameplay-action {
+    width: 162px; height: 60px; min-height: 0; margin: 0; padding: 4px 10px;
+    border-width: 0; border-radius: 0; background-color: rgba(0,0,0,0);
+    background-image: url("project://database/Assets/Via/Art/UI/Popups/UI_Button_Popup_Normal.png?fileID=21300000&guid=579c87a423330e3488036ce33381c653&type=3");
+    background-size: 100% 100%; background-repeat: no-repeat;
+    -unity-slice-left: 8; -unity-slice-right: 8; -unity-slice-top: 8; -unity-slice-bottom: 8; -unity-slice-scale: 1px;
+    color: rgb(12,17,18); font-size: 26px; -unity-font-style: bold;
+    -unity-font: url("project://database/Assets/Via/Art/Fonts/FONT_Main_Progress.ttf?fileID=12800000&guid=5ab883b058a25f84784a7ecf122e46e7&type=3");
+    -unity-font-definition: url("project://database/Assets/Via/Art/Fonts/FONT_Main_Progress.ttf?fileID=12800000&guid=5ab883b058a25f84784a7ecf122e46e7&type=3");
+}
+#gameplay-actions .gameplay-action:hover, #gameplay-actions .gameplay-action:focus, #gameplay-actions .gameplay-action:active {
+    background-color: rgba(0,0,0,0);
+    background-image: url("project://database/Assets/Via/Art/UI/Popups/UI_Button_Popup_Pressed.png?fileID=21300000&guid=a19bd81913954b14fa449a81fa63bc4a&type=3");
+}
+#gameplay-actions .gameplay-action:disabled { color: rgb(65,69,70); opacity: 0.65; }
+#candy-open {
+    position: absolute; left: 125px; top: 1000px;
+    width: 172px; height: 77px; min-width: 0; min-height: 0;
+    margin: 0; padding: 0; border-width: 0; border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Button_Candy.png?fileID=2800000&guid=29e14bf7252d08c4c894ad75df88b1d5&type=3");
+    background-size: contain; background-repeat: no-repeat;
+}
+#gameplay-artboard #candy-open:hover { background-color: rgba(0, 0, 0, 0); scale: 1.04 1.04; }
+#gameplay-artboard #candy-open:active { background-color: rgba(0, 0, 0, 0); scale: 0.96 0.96; }
+#gameplay-artboard #candy-open:disabled { opacity: 0.35; }
+#gameplay-actions { position: absolute; left: 728px; top: 1004px; width: 540px; height: 60px; flex-direction: row; justify-content: space-between; }
+#operation-hint {
+    position: absolute; left: 604px; bottom: 84px; width: 780px; height: auto; min-height: 92px;
+    margin: 0; padding: 16px 52px; border-width: 0; border-radius: 0;
+    background-color: rgba(0,0,0,0);
+    background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Panel_Directing.png?fileID=21300000&guid=fc7b5ac76a6e46ff9855f5d6f832d887&type=3");
+    background-size: 100% 100%; background-repeat: no-repeat;
+    -unity-slice-left: 16; -unity-slice-right: 16; -unity-slice-top: 12; -unity-slice-bottom: 12; -unity-slice-scale: 1px;
+    color: rgb(12,17,18); font-size: 26px; white-space: normal; -unity-text-align: middle-center;
+}
+#gameplay-board { background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_BackgroundBoard.png?fileID=21300000&guid=7146cfbd56c99f745b0c25ad88eaa8b7&type=3"); }
+#gameplay-brain { background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Brain_Variant02.png?fileID=21300000&guid=1bed8eb8b7184ed3acc0145ae361bc98&type=3"); }
+#gameplay-clamps { background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Clamps.png?fileID=21300000&guid=609d4cef903752d42983d93fc8d43ff3&type=3"); }
+#gameplay-title { background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Panel_LongBlack.png?fileID=21300000&guid=4bfd9d515591aa64cab8e7f899deb8ce&type=3"); }
+#level-name { background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Panel_ShortBlack.png?fileID=21300000&guid=6ebc992a3fec24245be3c2cc66d2b0de&type=3"); }
+#gameplay-tool-heading { background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Icon_Tool.png?fileID=21300000&guid=80130aaa75f11134eac658ea0a66de4b&type=3"); }
+#gameplay-pass-heading { background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Icon_Pass.png?fileID=21300000&guid=b6af46855ce908d4b8653476f0b908e1&type=3"); }
+.paradigm-y { background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Icon_YShape.png?fileID=21300000&guid=036992f404ca45242a81af47eb500bcc&type=3"); }
+.paradigm-eight { background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Icon_EightShape.png?fileID=21300000&guid=03d6ee8032f75934397daa86a4ccf0c4&type=3"); }
+.paradigm-polyline { background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Icon_Polyline.png?fileID=21300000&guid=7b2f4c9a8e1d4b6f93c05a2d7e8f1a34&type=3"); }
+.paradigm-polygon { background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Icon_Polygon.png?fileID=21300000&guid=d1a6e93f4c2b47a8b0e5d1c79a3f62b8&type=3"); }
+#tool-attractor .gameplay-tool-icon { background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Button_Attractor.png?fileID=21300000&guid=0e6d2f2d62a2fa942b53b649df2bad44&type=3"); }
+#tool-pull .gameplay-tool-icon { background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Button_Pull.png?fileID=21300000&guid=4c086b8b5c07ea5408b558c051319a24&type=3"); }
+#tool-cut .gameplay-tool-icon { background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Button_Cut.png?fileID=21300000&guid=49460a235a8ea2c4d8b6e3664b9fd118&type=3"); }
+#tool-branch .gameplay-tool-icon { background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Button_Branch.png?fileID=21300000&guid=f91384fee302873419fc4f4a6356a4f8&type=3"); }
+#tool-reshape .gameplay-tool-icon { background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Button_Reshape.png?fileID=21300000&guid=de2755ca3fa0ee741ba4bc9308ff234c&type=3"); }
+
+#gameplay-artboard .teaching-hud { left: 455px; top: 215px; width: 420px; }
+#gameplay-artboard .opponent-target { height: 300px; } .opponent-target .gameplay-paradigm-caption { height: 76px; font-size: 28px; }

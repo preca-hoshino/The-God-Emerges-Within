@@ -1,0 +1,179 @@
+/* Shared popup artwork. The large corner slices keep the asymmetric frame intact as panels grow.
+   Non-modal surfaces opt in with the popup-frame class; keep these slices in sync with the
+   sprite border on UI_Panel_Pop-up_Background.png (260 / 190 / 280 / 210). */
+.modal-panel,
+.popup-frame {
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Via/Art/UI/Popups/UI_Panel_Popup_Background.png?fileID=21300000&guid=cac4c5a91d6ab2b43ac054892b408012&type=3");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -unity-slice-left: 260;
+    -unity-slice-right: 280;
+    -unity-slice-top: 210;
+    -unity-slice-bottom: 190;
+    -unity-slice-scale: 1px;
+    color: rgb(19, 25, 27);
+}
+.modal-panel {
+    width: 840px;
+    min-height: 440px;
+    max-width: 90%;
+    max-height: 90%;
+    padding: 50px 84px 42px 76px;
+}
+.modal-panel .modal-title {
+    margin-bottom: 10px;
+    color: rgb(0, 126, 83);
+    font-size: 48px;
+    -unity-font-style: bold;
+}
+.modal-panel .modal-copy { margin-bottom: 16px; color: rgb(19, 25, 27); font-size: 27px; }
+.modal-panel > Button {
+    align-self: center;
+    width: 200px;
+    height: 74px;
+    min-height: 74px;
+    margin: 10px 0 0 0;
+    padding: 4px 12px;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Via/Art/UI/Popups/UI_Button_Popup_Normal.png?fileID=21300000&guid=579c87a423330e3488036ce33381c653&type=3");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -unity-slice-left: 8;
+    -unity-slice-right: 8;
+    -unity-slice-top: 8;
+    -unity-slice-bottom: 8;
+    -unity-slice-scale: 1px;
+    color: rgb(12, 17, 18);
+    font-size: 29px;
+    -unity-font: url("project://database/Assets/Via/Art/Fonts/FONT_Main_Progress.ttf?fileID=12800000&guid=5ab883b058a25f84784a7ecf122e46e7&type=3");
+    -unity-font-definition: url("project://database/Assets/Via/Art/Fonts/FONT_Main_Progress.ttf?fileID=12800000&guid=5ab883b058a25f84784a7ecf122e46e7&type=3");
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+.modal-panel > Button:hover, .modal-panel > Button:focus, .modal-panel > Button:active {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Via/Art/UI/Popups/UI_Button_Popup_Pressed.png?fileID=21300000&guid=a19bd81913954b14fa449a81fa63bc4a&type=3");
+}
+.modal-panel > Button:disabled { background-color: rgba(0, 0, 0, 0); color: rgb(65, 69, 70); opacity: 0.65; }
+#candy-panel { width: 840px; min-height: 500px; }
+#sample-list { min-height: 0; max-height: 400px; flex-grow: 1; margin-bottom: 12px; }
+#sample-list Button {
+    width: 100%;
+    height: 62px;
+    min-height: 62px;
+    margin: 5px 0;
+    padding: 4px 18px;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Via/Art/UI/Popups/UI_Button_PopupLong_Normal.png?fileID=21300000&guid=7a0b25848ca970e4a82b3c2ff192eab0&type=3");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -unity-slice-left: 8;
+    -unity-slice-right: 8;
+    -unity-slice-top: 8;
+    -unity-slice-bottom: 8;
+    -unity-slice-scale: 1px;
+    color: rgb(12, 17, 18);
+    font-size: 28px;
+    -unity-font: url("project://database/Assets/Via/Art/Fonts/FONT_Main_Progress.ttf?fileID=12800000&guid=5ab883b058a25f84784a7ecf122e46e7&type=3");
+    -unity-font-definition: url("project://database/Assets/Via/Art/Fonts/FONT_Main_Progress.ttf?fileID=12800000&guid=5ab883b058a25f84784a7ecf122e46e7&type=3");
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+#sample-list Button:hover, #sample-list Button:focus, #sample-list Button:active {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Via/Art/UI/Popups/UI_Button_PopupLong_Pressed.png?fileID=21300000&guid=bfdd36af61eb0464b912591d23bf205b&type=3");
+}
+#sample-list Button:disabled {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Via/Art/UI/Popups/UI_Button_PopupLong_Normal.png?fileID=21300000&guid=7a0b25848ca970e4a82b3c2ff192eab0&type=3");
+    color: rgb(65, 69, 70);
+    opacity: 0.65;
+}
+#notice-panel { padding-left: 120px; }
+#notice-close { align-self: flex-end; margin-right: 24px; }
+#settings-panel Slider {
+    height: 76px;
+    min-height: 76px;
+    margin: 8px 0;
+    font-size: 29px;
+}
+/* The three option captions are emphasised and sit slightly lower than the slider track. */
+#settings-panel Slider > Label {
+    min-width: 176px;
+    -unity-font-style: bold;
+    translate: 14px 16px;
+}
+#settings-panel .unity-base-slider__tracker { height: 9px; }
+#settings-panel .unity-base-slider__dragger { width: 22px; height: 34px; }
+#settings-panel > Button { width: 232px; height: 82px; min-height: 82px; font-size: 32px; }
+/* The credits panel sits slightly below the optical centre so the title does not compete with
+   the menu behind it; translate keeps the centring math in the modal layer untouched. */
+#credits-panel { width: 840px; padding: 50px 84px 42px 76px; translate: 0 60px; }
+#credits-panel > Button { align-self: center; }
+
+/* The tutorial HUD reuses the popup frame. Slice scale 0.5 keeps the ornament the same share of
+   the panel as on the 840 px modal: the 260 / 280 native corners become 130 / 140 on 420 px, so the
+   frame reads identically, just smaller. Anything below ~0.4 collapses the 1 px frame lines.
+   Type and button sizes are the modal-panel values verbatim so the two read as one component. */
+.teaching-hud {
+    position: absolute;
+    top: 115px;
+    left: 255px;
+    width: 420px;
+    padding: 50px 46px 44px 52px;
+    flex-direction: column;
+    align-items: stretch;
+    -unity-slice-scale: 0.5px;
+}
+.teaching-tags { flex-direction: column; align-items: flex-start; margin-bottom: 16px; }
+.teaching-tag {
+    padding: 2px 18px 5px 18px;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Via/Art/UI/Gameplay/UI_Panel_ShortBlack.png?fileID=21300000&guid=6ebc992a3fec24245be3c2cc66d2b0de&type=3");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: rgb(238, 245, 246);
+    font-size: 27px;
+    -unity-font-style: bold;
+    margin: 0;
+}
+.teaching-tag-count { margin: 4px 0 0 34px; }
+.teaching-copy { margin-bottom: 16px; font-size: 27px; }
+.teaching-title { color: rgb(0, 126, 83); font-size: 48px; -unity-font-style: bold; }
+.teaching-note { margin-bottom: 22px; color: rgb(0, 126, 83); font-size: 24px; }
+#teaching-exit {
+    align-self: center;
+    width: 200px;
+    height: 74px;
+    min-height: 74px;
+    margin: 0;
+    padding: 4px 12px;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Via/Art/UI/Popups/UI_Button_Popup_Normal.png?fileID=21300000&guid=579c87a423330e3488036ce33381c653&type=3");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -unity-slice-left: 8;
+    -unity-slice-right: 8;
+    -unity-slice-top: 8;
+    -unity-slice-bottom: 8;
+    -unity-slice-scale: 1px;
+    color: rgb(12, 17, 18);
+    font-size: 29px;
+    -unity-font: url("project://database/Assets/Via/Art/Fonts/FONT_Main_Progress.ttf?fileID=12800000&guid=5ab883b058a25f84784a7ecf122e46e7&type=3");
+    -unity-font-definition: url("project://database/Assets/Via/Art/Fonts/FONT_Main_Progress.ttf?fileID=12800000&guid=5ab883b058a25f84784a7ecf122e46e7&type=3");
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+#teaching-exit:hover, #teaching-exit:focus, #teaching-exit:active {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Via/Art/UI/Popups/UI_Button_Popup_Pressed.png?fileID=21300000&guid=a19bd81913954b14fa449a81fa63bc4a&type=3");
+}
